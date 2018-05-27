@@ -1,3 +1,7 @@
+# push PyTorch about Machine Learning by Git
+
+这是我的第一个用Git push的仓库，push内容为PyTorch入门机器学习
+
 第一个版本管理库
 
  - 创建版本库 (init)
@@ -31,7 +35,7 @@ git add `文件名.类型`
 git sdd . # git所有的改变
 
 # 提交修改
-git commit -m "change_1" # -m "" 添加修改注释
+git commit -m "change_1" # -m "添加修改注释" 
 
 # 查看修改日志
 git log
