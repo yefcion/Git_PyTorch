@@ -2,47 +2,6 @@
 
 这是我的第一个用Git push的仓库，push内容为PyTorch入门机器学习
 
-第一个版本管理库
+`Git_study.md`  是我关于GitHub的学习笔记
 
- - 创建版本库 (init)
- - 添加文件管理 (add)
- - 提交修改 (commit)
-
-
-
-```python
-cd `本地仓库路径`
-git config --global user.name "用户名"
-git config --global user.email "电子邮件"
-
-# 查看用户信息
-git config user.name
-git config user.email
-
-# 清屏
-clear
-
-# 显示所有文件
-ls -a
-
-# 查看仓库中文件状态
-git status
-git status -s # 缩写形式
-git diff # 查看不同
-
-# 将本地添加的文件添加进仓库
-git add `文件名.类型`
-git sdd . # git所有的改变
-
-# 提交修改
-git commit -m "change_1" # -m "添加修改注释" 
-
-# 查看修改日志
-git log
-
-# 推到GitHub
-git push
-```
-
-
-
+其他部分是用 jupyter notebook 写的 PyTorch 笔记，笔记内容基于莫凡的 [PyTorch 教程](https://github.com/MorvanZhou/tutorials/tree/master/pyTorch%20tutorial)

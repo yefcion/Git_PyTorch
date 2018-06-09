@@ -15,7 +15,7 @@
 
 
 
-##   Git安装
+##   Git安装与使用
 
 Windows进入[官网](https://git-scm.com/downloads)下载软件安装。安装完成后启动`Git Bash `，开启命令行窗口。
 
@@ -41,6 +41,8 @@ $ git config --global user.email "email@example.com"
 3. 修改文件
 
    `git status`  查看仓库当前的状态
+
+   `git rm`  用于删除一个文件 
 
    `git diff`  查看修改内容 
 
@@ -68,33 +70,63 @@ $ git config --global user.email "email@example.com"
 
    `git reflog`  查看命令历史，以便确定要回到未来的哪个版本 
 
-场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`。
+   
 
-场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景1，第二步按场景1操作。
+   **场景1：**当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`。
 
-场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000)一节，不过前提是没有推送到远程库。
+   **场景2：**当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景1，第二步按场景1操作。
 
-`git rm`用于删除一个文件 
+   **场景3：**已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000)一节，不过前提是没有推送到远程库。
+
+5. 克隆/更新GitHub上的仓库(Repository)
+
+   `git clone <仓库地址>`  从GitHub上clone项目到本地
+
+   `git push`  将本地修改推送到GitHub
 
 
 
-创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建
+## 常用功能汇总
 
+- 创建版本库 (init)
+- 添加文件管理 (add)
+- 提交修改 (commit)
+
+
+
+```python
+cd `本地仓库路径`
+git config --global user.name "用户名"
+git config --global user.email "电子邮件"
+
+# 查看用户信息
+git config user.name
+git config user.email
+
+# 清屏
+clear
+
+# 显示所有文件
+ls -a
+
+# 查看仓库中文件状态
+git status
+git status -s # 缩写形式
+git diff # 查看不同
+
+# 将本地添加的文件添加进仓库
+git add `文件名.类型`
+git add . # git所有的改变
+
+# 提交修改
+git commit -m "change_1" # -m "添加修改注释" 
+
+# 查看修改日志
+git log
+
+# 推到GitHub
+git push
 ```
-   $ ssh-keygen -t rsa -C "youremail@example.com"
-```
-
-​       
-
-然后一路回车。这时你就会在用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件   
-
-​      ![img](https://img-blog.csdn.net/20170414170253668) 
-
-
-
-
-
-
 
 
 
